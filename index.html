@@ -374,7 +374,9 @@
 <body>
     <div class="profile-container" id="resume-content">
         <div class="header">
-            <img src="C:\Users\Admin\Pictures\EXALINA-NAANMUDHALVAN\EXALINA_PROFILE_IMAGE.jpg" alt="Exalina's Profile Picture" class="profile-pic">
+<!--             <img src="C:\Users\Admin\Pictures\EXALINA-NAANMUDHALVAN\EXALINA_PROFILE_IMAGE.jpg" alt="Exalina's Profile Picture" class="profile-pic"> -->
+            <img src="https://raw.githubusercontent.com/EXALINA-A/Portfolio/main/EXALINA_PROFILE_IMAGE.jpg" 
+     alt="Exalina's Profile Picture" class="profile-pic">
             <div class="header-text">
                 <h1>EXALINA A</h1>
                 <h2>B.Sc. Computer Science</h2>
@@ -532,90 +534,6 @@
             <p>© 2024 Exalina A. All rights reserved.</p>
         </div>
     </div>
-
-    <!-- <script>
-        // Initialize jsPDF
-        const { jsPDF } = window.jspdf;
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate progress bars
-            const progressBars = document.querySelectorAll('.progress-level');
-            
-            progressBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                    bar.style.transition = 'width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)';
-                }, 100);
-            });
-            
-            // Add animation to sections when scrolling
-            const sections = document.querySelectorAll('.section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            sections.forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(section);
-            });
-            
-            // Add hover effect to profile picture
-            const profilePic = document.querySelector('.profile-pic');
-            profilePic.addEventListener('mouseenter', () => {
-                profilePic.style.borderColor = 'rgba(0, 180, 216, 0.5)';
-            });
-            profilePic.addEventListener('mouseleave', () => {
-                profilePic.style.borderColor = 'rgba(0, 180, 216, 0.2)';
-            });
-            
-            // Download PDF functionality
-            document.getElementById('downloadPdf').addEventListener('click', function() {
-                // Get the resume content element
-                const element = document.getElementById('resume-content');
-                
-                // Use html2canvas to capture the resume as an image
-                html2canvas(element, {
-                    scale: 2, // Higher quality
-                    logging: false,
-                    useCORS: true,
-                    allowTaint: true
-                }).then(canvas => {
-                    // Create PDF
-                    const imgData = canvas.toDataURL('image/png');
-                    const pdf = new jsPDF('p', 'mm', 'a4');
-                    const imgWidth = 210; // A4 width in mm
-                    const pageHeight = 295; // A4 height in mm
-                    const imgHeight = canvas.height * imgWidth / canvas.width;
-                    let heightLeft = imgHeight;
-                    let position = 0;
-                    
-                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                    heightLeft -= pageHeight;
-                    
-                    // Add additional pages if needed
-                    while (heightLeft >= 0) {
-                        position = heightLeft - imgHeight;
-                        pdf.addPage();
-                        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                        heightLeft -= pageHeight;
-                    }
-                    
-                    // Save the PDF
-                    pdf.save("C:\Users\Admin\Pictures\EXALINA-NAANMUDHALVAN\EXALINA-RESUME.pdf");
-                });
-            });
-        });
-    </script> -->
     <script>document.addEventListener('DOMContentLoaded', function() {
         // Ensure jsPDF is loaded properly
         const jsPDF = window.jspdf.jsPDF;
